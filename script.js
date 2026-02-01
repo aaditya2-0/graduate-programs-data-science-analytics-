@@ -12,6 +12,36 @@ function fadeTo(nextHtml, afterMs = 450) {
   }, afterMs);
 }
 
+function sendValentineEmail() {
+  const subject = encodeURIComponent("Legally Binding Valentine Agreement 💘");
+  const body = encodeURIComponent(`
+  This email serves as OFFICIAL, LEGALLY BINDING, UNDENIABLE proof that you have agreed to be Aaditya's Valentine for February 14th, 2026.
+  
+  By clicking "Yes" on the website, you have voluntarily and enthusiastically accepted the following duties:
+  
+  • Accepting Chick-fil-A sauce comparisons without judgment
+  • Receiving an unreasonable amount of hearts 💗💖💘
+  • Listening to elite music taste and pretending to like it
+  • Allowing Aaditya to be mildly annoying in a charming way
+  • Agreeing to chocolate mousse cake consumption
+  • Accepting noodle-based date activities
+  • Permitting random wholesome messages throughout the day
+  
+  This agreement is permanent for the date listed above and may be renewed annually.
+  
+  No refunds.
+  No take-backs.
+  No "I misclicked".
+  
+  Signed electronically,
+  Aaditya Mandal
+  (very serious about this)
+    `);
+  
+    window.location.href = `mailto:aadityam29@gmail.com?subject=${subject}&body=${body}`;
+  }
+
+
 /* ---- Screens ---- */
 
 function screen0LoadingError() {
