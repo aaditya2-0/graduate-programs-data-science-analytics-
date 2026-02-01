@@ -111,70 +111,73 @@ function screenFinalFavorites() {
     <div class="final">
       <div class="hearts-fall" aria-hidden="true"></div>
 
-      <div class="collage">
-        <div class="collage-board">
-          <div class="sparkle" style="left: 6%; top: 10%;">💘</div>
-          <div class="sparkle" style="left: 90%; top: 18%; animation-delay: 0.4s;">✨</div>
-          <div class="sparkle" style="left: 10%; top: 78%; animation-delay: 0.8s;">💖</div>
+      <div class="final-inner">
+        <div class="final-header">
+          <h1>OKAYYYYY 👀💘</h1>
+          <p>scroll the collage 😤</p>
+        </div>
 
-          <div class="note" style="left: 6%; top: 6%; --w: 280px; --r: -2deg;">
-            <h3>ok soooo…</h3>
-            <p>you said yes?? oh.. well.. counting the days until you're back 💗</p>
+        <div class="collage-grid">
+          <div class="collage-item">
+            <div class="collage-note">
+              <h3>ok soooo…</h3>
+              <p>you said yes?? oh.. well.. counting the days until you're back 💗</p>
+            </div>
           </div>
 
-          <div class="polaroid" style="left: 10%; top: 180px; --w: 260px; --r: -6deg;">
+          <div class="collage-item">
             <img src="images/chickfila.jpg" alt="Chick-fil-A sandwich">
+            <div class="collage-cap">spicy sandwich + sauce <small>the blueprint 🔥</small></div>
           </div>
 
-          <div class="polaroid" style="left: 52%; top: 220px; --w: 260px; --r: 4deg;">
+          <div class="collage-item">
             <img src="images/cake.jpg" alt="Chocolate mousse cake">
-            <div class="cap">chocolate mousse cake 🍫🍰</div>
+            <div class="collage-cap">chocolate mousse cake <small>dangerous level dessert 🍫</small></div>
           </div>
 
-          <div class="polaroid" style="left: 18%; top: 760px; --w: 260px; --r: 7deg;">
+          <div class="collage-item">
             <img src="images/noodles.jpg" alt="Noodles">
-            <div class="cap">NOODLES 🍜🍜🍜</div>
+            <div class="collage-cap">NOODLES <small>mandatory 🍜</small></div>
           </div>
 
-          <div class="polaroid" style="left: 60%; top: 980px; --w: 240px; --r: -3deg;">
+          <div class="collage-item">
             <img src="images/marshmallows.jpg" alt="Marshmallows">
-            <div class="cap">marshmallows ☁️🍡</div>
+            <div class="collage-cap">marshmallows <small>fluffy elite ☁️</small></div>
           </div>
 
-          <div class="polaroid" style="left: 70%; top: 520px; --w: 280px; --r: 3deg;">
-            <img src="images/gilmore.jpg" alt="Gilmore">
-            <div class="cap">gilmore vibes ☕️📚</div>
-          </div>
-
-          <!-- Fish burrito (bigger) -->
-          <div class="polaroid" style="left: 8%; top: 1220px; --w: 300px; --r: 4deg;">
+          <div class="collage-item">
             <img src="images/fish_burrito.jpg" alt="Fish burrito">
-            <div class="cap">elite fish burrito 🌯🐟</div>
+            <div class="collage-cap">fish burrito <small>yes. yes. yes. 🌯🐟</small></div>
           </div>
-          
-          <!-- OC poster (BIG) -->
-          <div class="polaroid" style="left: 40%; top: 1280px; --w: 420px; --r: -3deg;">
+
+          <!-- Posters: span bigger -->
+          <div class="collage-item span-2">
             <img src="images/oc.jpg" alt="OC poster">
-            <div class="cap">poster energy 🎬</div>
+            <div class="collage-cap">poster #1 <small>bigger so you can actually read it 👀</small></div>
           </div>
-          
-          <!-- Modern poster (BIG) -->
-          <div class="polaroid" style="left: 55%; top: 1720px; --w: 420px; --r: 5deg;">
+
+          <div class="collage-item span-2">
             <img src="images/modern1.jpg" alt="Modern poster">
-            <div class="cap">modern vibes 🖼️</div>
+            <div class="collage-cap">poster #2 <small>also big 😤</small></div>
           </div>
 
+          <div class="collage-item">
+            <img src="images/gilmore.jpg" alt="Gilmore">
+            <div class="collage-cap">gilmore vibes <small>☕️📚</small></div>
+          </div>
 
-          
-          <div class="note" style="left: 72%; top: 70%; --w: 250px; --r: -2deg;">
-            <h3>final verdict</h3>
-            <p>you’re my favorite person every 💞</p>
+          <div class="collage-item">
+            <div class="collage-note">
+              <h3>final verdict</h3>
+              <p>you’re my favorite person every 💞</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   `;
 }
+
 
 
 /* ---- Button behavior (No runs around but still catchable) ---- */
@@ -185,38 +188,31 @@ function wireDuckButtons() {
   const warning = document.getElementById("warning");
   const btnRow = document.getElementById("btnRow");
 
-  let noClickedOnce = false;
-  let dodgeLevel = 0; // increases slightly, but capped
-  const maxDodgeLevel = 6;
+  let dodgeLevel = 0;
+  const maxDodgeLevel = 4; // keep it chill for phone
+  let noEscapesLeft = 2;   // <-- flies off 2 times
 
   function clamp(n, min, max) { return Math.max(min, Math.min(max, n)); }
 
-  function moveNoButton() {
-    // Keep movement modest & bounded so it's not impossible
+  function moveNoButtonSmall() {
     const rowRect = btnRow.getBoundingClientRect();
     const btnRect = noBtn.getBoundingClientRect();
 
-    // movement range grows slightly but caps
-    const rangeX = 22 + dodgeLevel * 10; // up to ~82px
-    const rangeY = 10 + dodgeLevel * 6;  // up to ~46px
+    const rangeX = 18 + dodgeLevel * 8;  // smaller than before (phone friendly)
+    const rangeY = 8 + dodgeLevel * 5;
 
-    // random shift
     const dx = (Math.random() * 2 - 1) * rangeX;
     const dy = (Math.random() * 2 - 1) * rangeY;
 
-    // current transform offset (if any)
     const m = noBtn.style.transform.match(/translate\(([-\d.]+)px,\s*([-\d.]+)px\)/);
     const curX = m ? parseFloat(m[1]) : 0;
     const curY = m ? parseFloat(m[2]) : 0;
 
-    // try new offset
     let nextX = curX + dx;
     let nextY = curY + dy;
 
-    // Boundaries: ensure button stays within row area (roughly)
-    // We approximate by limiting translate so button doesn't leave the btnRow width.
     const maxX = (rowRect.width / 2) - (btnRect.width / 2) - 6;
-    const maxY = 40;
+    const maxY = 34;
 
     nextX = clamp(nextX, -maxX, maxX);
     nextY = clamp(nextY, -maxY, maxY);
@@ -224,35 +220,61 @@ function wireDuckButtons() {
     noBtn.style.transform = `translate(${nextX}px, ${nextY}px)`;
   }
 
-  // Make it scoot a bit when you hover/approach
+  function flyOffButtonTwice(btn) {
+    const dir = Math.random() < 0.5 ? -1 : 1;
+
+    btn.animate(
+      [
+        { transform: btn.style.transform || "translate(0px, 0px) rotate(0deg)" },
+        { transform: `translate(${dir * 480}px, -260px) rotate(${dir * 28}deg)` }
+      ],
+      { duration: 420, easing: "cubic-bezier(.2,.9,.2,1)" }
+    );
+
+    // Reset after fling so it can be clicked again
+    setTimeout(() => {
+      btn.style.transform = "translate(0px, 0px)";
+    }, 430);
+  }
+
+  // Slight dodge on hover (not impossible)
   noBtn.addEventListener("mouseenter", () => {
-    if (noClickedOnce) return;
+    if (noEscapesLeft <= 0) return; // once it's "finally clickable", stop dodging
     dodgeLevel = Math.min(maxDodgeLevel, dodgeLevel + 1);
-    moveNoButton();
+    moveNoButtonSmall();
   });
 
-  // Small chance it wiggles even if they chase it
   noBtn.addEventListener("mousemove", () => {
-    if (noClickedOnce) return;
-    if (Math.random() < 0.18) moveNoButton();
+    if (noEscapesLeft <= 0) return;
+    if (Math.random() < 0.12) moveNoButtonSmall();
   });
 
-  // IMPORTANT: No is now clickable
-  noBtn.addEventListener("click", () => {
-    if (noClickedOnce) return;
-    noClickedOnce = true;
+  // Click behavior: fly off 2 times, then stay
+  noBtn.addEventListener("click", (e) => {
+    e.preventDefault();
     warning.textContent = "Do you like hate me????";
-    // stop moving + reset to normal spot
+
+    if (noEscapesLeft > 0) {
+      noEscapesLeft -= 1;
+      flyOffButtonTwice(noBtn);
+      return;
+    }
+
+    // After 2 escapes, it stays put (still shows warning)
     noBtn.style.transform = "translate(0px, 0px)";
   });
 
   yesBtn.addEventListener("click", () => {
+    // If you're also doing the mailto email, call it here:
+    // sendValentineEmail();
+
     fadeTo(screenYesHold());
     setTimeout(() => {
       fadeTo(screenFinalFavorites());
     }, 3000);
   });
 }
+
 
 /* ---- Flow ---- */
 
