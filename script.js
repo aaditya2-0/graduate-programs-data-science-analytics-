@@ -114,7 +114,7 @@ function screenFinalFavorites() {
       <div class="final-inner">
         <div class="final-header">
           <h1>OKAYYYYY 👀💘</h1>
-          <p>scroll the collage 😤</p>
+          <p>my little collage of you</p>
         </div>
 
         <div class="collage-grid">
@@ -123,16 +123,17 @@ function screenFinalFavorites() {
               <h3>ok soooo…</h3>
               <p>you said yes?? oh.. well.. counting the days until you're back 💗</p>
             </div>
+            <div class="collage-cap"><small>contract signed ✅</small></div>
           </div>
 
           <div class="collage-item">
             <img src="images/chickfila.jpg" alt="Chick-fil-A sandwich">
-            <div class="collage-cap">spicy sandwich + sauce <small>the blueprint 🔥</small></div>
+            <div class="collage-cap">spicy sandwich <small>+ sauce energy 🔥</small></div>
           </div>
 
           <div class="collage-item">
             <img src="images/cake.jpg" alt="Chocolate mousse cake">
-            <div class="collage-cap">chocolate mousse cake <small>dangerous level dessert 🍫</small></div>
+            <div class="collage-cap">mousse cake <small>dangerous 🍫</small></div>
           </div>
 
           <div class="collage-item">
@@ -142,23 +143,23 @@ function screenFinalFavorites() {
 
           <div class="collage-item">
             <img src="images/marshmallows.jpg" alt="Marshmallows">
-            <div class="collage-cap">marshmallows <small>fluffy elite ☁️</small></div>
+            <div class="collage-cap">marshmallows <small>☁️</small></div>
           </div>
 
           <div class="collage-item">
             <img src="images/fish_burrito.jpg" alt="Fish burrito">
-            <div class="collage-cap">fish burrito <small>yes. yes. yes. 🌯🐟</small></div>
+            <div class="collage-cap">fish burrito <small>🌯🐟</small></div>
           </div>
 
-          <!-- Posters: span bigger -->
+          <!-- posters: big on desktop, normal on phone -->
           <div class="collage-item span-2">
             <img src="images/oc.jpg" alt="OC poster">
-            <div class="collage-cap">poster #1 <small>bigger so you can actually read it 👀</small></div>
+            <div class="collage-cap">poster #1 <small>readable on desktop 👀</small></div>
           </div>
 
           <div class="collage-item span-2">
             <img src="images/modern1.jpg" alt="Modern poster">
-            <div class="collage-cap">poster #2 <small>also big 😤</small></div>
+            <div class="collage-cap">poster #2 <small>readable on desktop 😤</small></div>
           </div>
 
           <div class="collage-item">
@@ -171,12 +172,14 @@ function screenFinalFavorites() {
               <h3>final verdict</h3>
               <p>you’re my favorite person every 💞</p>
             </div>
+            <div class="collage-cap"><small>no takebacks</small></div>
           </div>
         </div>
       </div>
     </div>
   `;
 }
+
 
 
 
