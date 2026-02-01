@@ -124,6 +124,7 @@ function screenFinalFavorites() {
 
           <div class="polaroid" style="left: 10%; top: 32%; --w: 260px; --r: -6deg;">
             <img src="images/chickfila.jpg" alt="Chick-fil-A sandwich">
+            <div class="cap">Spicy Deluxe Chicken Sandwich (no tomatoes) with Chick-Fil-A Sauce</div>
           </div>
 
           <div class="polaroid" style="left: 38%; top: 16%; --w: 250px; --r: 4deg;">
@@ -148,12 +149,12 @@ function screenFinalFavorites() {
           
           <div class="polaroid" style="left: 6%; top: 72%; --w: 230px; --r: 2deg;">
             <img src="images/oc.jpg" alt="OC poster">
-            <div class="cap">oc poster 🖼️</div>
+            <div class="cap">you are the summer to my seth!</div>
           </div>
           
           <div class="polaroid" style="left: 34%; top: 74%; --w: 230px; --r: -2deg;">
             <img src="images/modern1.jpg" alt="Modern poster">
-            <div class="cap">modern poster 🎬</div>
+            <div class="cap">do you, do you!</div>
           </div>
 
           
