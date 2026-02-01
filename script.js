@@ -89,12 +89,11 @@ function screenFinalFavorites() {
 
           <div class="note" style="left: 6%; top: 6%; --w: 280px; --r: -2deg;">
             <h3>ok soooo…</h3>
-            <p>if you said yes… you’re kinda stuck with me now 😭💗</p>
+            <p>you said yes?? oh.. well.. counting the days until you're back 💗</p>
           </div>
 
           <div class="polaroid" style="left: 10%; top: 32%; --w: 260px; --r: -6deg;">
             <img src="images/chickfila.jpg" alt="Chick-fil-A sandwich">
-            <div class="cap">:contentReference[oaicite:0]{index=0} vibes 🍔🔥</div>
           </div>
 
           <div class="polaroid" style="left: 38%; top: 16%; --w: 250px; --r: 4deg;">
@@ -112,14 +111,14 @@ function screenFinalFavorites() {
             <div class="cap">marshmallows ☁️🍡</div>
           </div>
 
-          <div class="note" style="left: 70%; top: 10%; --w: 260px; --r: 2deg;">
-            <h3>playlist energy</h3>
-            <p>:contentReference[oaicite:1]{index=1} + :contentReference[oaicite:2]{index=2} = elite taste 🎧</p>
+          <div class="polaroid" style="left: 68%; top: 14%; --w: 260px; --r: 3deg;">
+            <img src="images/gilmore.jpg" alt="Gilmore">
+            <div class="cap">gilmore vibes ☕️📚</div>
           </div>
-
+          
           <div class="note" style="left: 72%; top: 70%; --w: 250px; --r: -2deg;">
             <h3>final verdict</h3>
-            <p>you’re my favorite person to annoy 💞</p>
+            <p>you’re my favorite person every 💞</p>
           </div>
         </div>
       </div>
