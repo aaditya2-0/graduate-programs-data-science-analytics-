@@ -482,6 +482,53 @@ button:active { transform: scale(0.98); }
   box-shadow: 0 6px 14px rgba(0,0,0,0.10);
 }
 
+/* MOBILE FIX: turn the corkboard into a clean scrollable stack */
+@media (max-width: 520px) {
+  .final {
+    height: auto;         /* allow page to grow */
+    overflow: auto;       /* enable scrolling */
+  }
+
+  .collage {
+    height: auto;
+    padding: 14px;
+    display: block;       /* stop centering */
+  }
+
+  .collage-board {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    overflow: visible;
+
+    /* stack everything nicely */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    border-radius: 18px;
+  }
+
+  /* turn absolute-position items into normal flow */
+  .note,
+  .polaroid,
+  .sparkle {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .polaroid img {
+    height: 200px;        /* bigger + readable on phone */
+  }
+
+  .note h3 { font-size: 15px; }
+  .note p  { font-size: 13px; }
+  .polaroid .cap { font-size: 13px; }
+}
 
 .sparkle {
   position: absolute;
