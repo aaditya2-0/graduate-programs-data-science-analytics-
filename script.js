@@ -146,6 +146,17 @@ function screenFinalFavorites() {
             <div class="cap">gilmore vibes ☕️📚</div>
           </div>
           
+          <div class="polaroid" style="left: 6%; top: 72%; --w: 230px; --r: 2deg;">
+            <img src="images/oc.jpg" alt="OC poster">
+            <div class="cap">oc poster 🖼️</div>
+          </div>
+          
+          <div class="polaroid" style="left: 34%; top: 74%; --w: 230px; --r: -2deg;">
+            <img src="images/modern1.jpg" alt="Modern poster">
+            <div class="cap">modern poster 🎬</div>
+          </div>
+
+          
           <div class="note" style="left: 72%; top: 70%; --w: 250px; --r: -2deg;">
             <h3>final verdict</h3>
             <p>you’re my favorite person every 💞</p>
