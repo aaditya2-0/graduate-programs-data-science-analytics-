@@ -1,0 +1,198 @@
+/* Base */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: white;
+}
+
+#app {
+  height: 100%;
+}
+
+/* Simple fade helpers */
+.fade-in {
+  animation: fadeIn 600ms ease forwards;
+}
+.fade-out {
+  animation: fadeOut 450ms ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* Screen 1: intro text */
+.center {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  text-align: center;
+}
+
+.intro-text {
+  font-size: clamp(22px, 4vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* Screen 2: Duck street scene */
+.scene {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  overflow: hidden;
+}
+
+/* "Sky" */
+.sky {
+  position: relative;
+  background: linear-gradient(#cfe9ff, #f7fbff);
+  display: grid;
+  place-items: center;
+}
+
+/* Question + buttons overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: min(680px, 92vw);
+  background: rgba(255,255,255,0.88);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.10);
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+.question {
+  margin: 0 0 12px;
+  font-size: clamp(20px, 3.5vw, 36px);
+  font-weight: 800;
+}
+
+.subtext {
+  margin: 0 0 14px;
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+.btn-row {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 120ms ease, filter 120ms ease;
+}
+
+button:active { transform: scale(0.98); }
+
+.btn-yes {
+  background: #ff4d88;
+  color: white;
+}
+.btn-yes:hover { filter: brightness(1.03); }
+
+.btn-no {
+  background: #222;
+  color: white;
+}
+
+/* Warning text */
+.warning {
+  margin-top: 12px;
+  min-height: 22px;
+  font-weight: 800;
+  color: #c4002a;
+}
+
+/* Street at bottom */
+.street {
+  height: 26vh;
+  min-height: 160px;
+  background:
+    linear-gradient(#2b2b2b, #1f1f1f);
+  position: relative;
+}
+
+/* Lane line */
+.street::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  top: 48%;
+  height: 6px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #ffd54a 0 42px,
+      transparent 42px 76px
+    );
+  opacity: 0.85;
+}
+
+/* Duck "walk" */
+.duck {
+  position: absolute;
+  left: -10%;
+  bottom: calc(26vh - 85px); /* anchor around top of street */
+  font-size: 64px;
+  animation:
+    duckMove 7s linear infinite,
+    duckBob 500ms ease-in-out infinite;
+  user-select: none;
+  filter: drop-shadow(0 10px 10px rgba(0,0,0,0.18));
+}
+
+@keyframes duckMove {
+  0% { transform: translateX(0) scaleX(1); }
+  100% { transform: translateX(130vw) scaleX(1); }
+}
+
+@keyframes duckBob {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -6px; }
+}
+
+/* Screen 3 placeholder */
+.final {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  text-align: center;
+  background: linear-gradient(#fff0f6, #ffffff);
+}
+
+.final h1 {
+  margin: 0 0 10px;
+  font-size: clamp(22px, 4vw, 44px);
+}
+.final p {
+  margin: 0;
+  opacity: 0.75;
+}
