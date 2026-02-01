@@ -271,7 +271,7 @@ function start() {
       setTimeout(() => wireDuckButtons(), 500);
     }, 4000);
 
-  }, 30000);
+  }, 3000);
 }
 
 start();
