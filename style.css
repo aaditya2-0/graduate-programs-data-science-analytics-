@@ -405,23 +405,17 @@ button:active { transform: scale(0.98); }
 
 .collage {
   position: relative;
-  height: 100%;
-  padding: 22px;
-  display: grid;
-  place-items: center;
+  padding: 40px 0 80px;
 }
 
+
 .collage-board {
-  width: min(1050px, 94vw);
-  height: min(620px, 78vh);
+  width: min(1100px, 94vw);
+  min-height: 2200px;     /* BIG vertical scrapbook */
   position: relative;
-  border-radius: 24px;
-  background: rgba(255,255,255,0.72);
-  border: 1px solid rgba(0,0,0,0.06);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.10);
-  backdrop-filter: blur(8px);
-  overflow: hidden;
+  margin: 40px auto 80px;
 }
+
 
 .note {
   position: absolute;
