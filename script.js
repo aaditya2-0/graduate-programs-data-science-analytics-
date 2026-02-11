@@ -52,7 +52,7 @@ function screen0LoadingError() {
 function screenIntroText() {
   return `
     <div class="center">
-      <div class="intro-text">oh you thought I can't code???</div>
+      <div class="intro-text">oh you thought I was going to do more school??</div>
     </div>
   `;
 }
