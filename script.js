@@ -160,7 +160,7 @@ function screenFinalFavorites() {
           
           <div class="note" style="left: 72%; top: 70%; --w: 250px; --r: -2deg;">
             <h3>final verdict</h3>
-            <p>you’re my favorite person every 💞</p>
+            <p>you’re my favorite person ever! 💞</p>
           </div>
         </div>
       </div>
